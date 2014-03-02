@@ -1,0 +1,40 @@
+" ================ Modelines & Notes {
+" vim: syntax=vim foldmarker={,} foldlevel=0 foldmethod=marker :
+"
+" Cosy-Vim - Vim plugins & configuration. 
+"
+" }
+
+" ================ Vim Plugins ====================
+filetype off				"Required by Vundle
+
+" Install Vundle if not already installed
+let s:FreshInstall = 0
+if isdirectory($HOME . '/.vim/bundle/vundle') == 0
+	:silent !mkdir -p ~/.vim/bundle > /dev/null 2>&1
+	:silent !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+	let FreshInstall = 1
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"Required by Vundle
+Bundle 'gmarik/vundle'		
+
+" Must-have Plugins
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tComment'
+Bundle 'godlygeek/tabular'
+
+" UI Customizations
+Bundle 'chriskempson/base16-vim'
+Bundle 'bling/vim-airline'
+
+" If Vundle was fresh installed, install Bundles
+if FreshInstall == 1
+	:BundleInstall
+endif
+
+filetype plugin indent on		"Required by Vundle

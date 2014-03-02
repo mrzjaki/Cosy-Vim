@@ -1,0 +1,28 @@
+" ================ Modelines & Notes {
+" vim: syntax=vim foldmarker={,} foldlevel=0 foldmethod=marker :
+"
+" Cosy-Vim - Vim plugins & configuration. 
+"
+" }
+
+" ================ Airline Settings {
+let g:airline_theme='powerlineish'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_branch_prefix = ''
+"}
+
+" ================ CtrlP Settings {
+let g:ctrlp_map = '<c-p>'					" Default Keymapping for CtrlP
+let g:ctrlp_cmd = 'CtrlPMixed'              " Search anything (in files, buffers and MRU files at the same time.)
+let g:ctrlp_switch_buffer = 'et'			" Jump to a file if it's open already
+let g:ctrlp_working_path_mode = 'ra'        " Search for nearest ancestor like .git, .hg, and the directory of the current file
+let g:ctrlp_root_markers=['']
+let g:ctrlp_show_hidden = 1	" Show hidden files
+let g:ctrlp_cache_dir = $HOME.'/.vim/cache/ctrlp'
+let g:ctrlp_extensions = ['undo','bookmarkdir']
+"}
+
+" ================ tComment Settings {
+	
+"}

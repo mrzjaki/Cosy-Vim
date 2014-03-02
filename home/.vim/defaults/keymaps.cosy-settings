@@ -1,0 +1,47 @@
+" ================ Modelines & Notes {
+" vim: syntax=vim foldmarker={,} foldlevel=0 foldmethod=marker :
+"
+" Cosy-Vim - Vim plugins & configuration. 
+"
+" }
+
+" ================ File Mappings {
+	let mapleader = ","
+	let g:mapleader = ","
+"}
+
+" ================ View Mappings {
+
+"}
+
+" ================ Edit Mappings {
+
+"}
+
+" ================ Find & Search Mappings {
+
+"}
+
+" ================ Plugins Mappings {
+	"tComment
+	map <leader><leader>/ :TComment<cr>
+	vmap <leader><leader>/ :TComment<cr>gv
+
+	"Tabularize
+	nmap <leader>a& :Tabularize /&<CR>
+	vmap <leader>a& :Tabularize /&<CR>
+	nmap <leader>a= :Tabularize /=<CR>
+	vmap <leader>a= :Tabularize /=<CR>
+	nmap <leader>a: :Tabularize /:<CR>
+	vmap <leader>a: :Tabularize /:<CR>
+	nmap <leader>a:: :Tabularize /:\zs<CR>
+	vmap <leader>a:: :Tabularize /:\zs<CR>
+	nmap <leader>a, :Tabularize /,<CR>
+	vmap <leader>a, :Tabularize /,<CR>
+	nmap <leader>a,, :Tabularize /,\zs<CR>
+	vmap <leader>a,, :Tabularize /,\zs<CR>
+	nmap <leader>a<Bar> :Tabularize /<Bar><CR>
+	vmap <leader>a<Bar> :Tabularize /<Bar><CR>
+	nmap <leader>a" :Tabularize /"<CR>
+	vmap <leader>a" :Tabularize /"<CR>
+"}

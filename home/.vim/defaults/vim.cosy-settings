@@ -1,0 +1,105 @@
+" ================ Modelines & Notes {
+" vim: syntax=vim foldmarker={,} foldlevel=0 foldmethod=marker :
+"
+" Cosy-Vim - Vim plugins & configuration. 
+"
+" }
+
+" ================ General Settings {
+	set encoding=utf-8
+	set autoread                                                 " Reload files changed outside vim
+	set hidden                                                   " Hides buffer instead of closing them
+	set timeoutlen=500                                           " Mapping delay timeout
+	set ttimeoutlen=50                                           " Keycode delay timeout
+	set visualbell                                               " No sounds
+	set modeline
+	set modelines=5
+
+	set history=100                                              " Maximum command-line history
+	set wildmenu                                                 " Show list instead of just completing
+	set wildmode=list:longest,full                               " Command <Tab> completion, list
+	set wildignore+=*.exe,*.swp,.DS_Store
+
+	set noswapfile                                               " Disable swapfile
+	set nobackup                                                 " Disable backup
+	set nowritebackup                                            " Disable backup
+
+	if isdirectory($HOME . '/.vim/cache/undo') == 0
+		:silent !mkdir -p ~/.vim/cache/undo > /dev/null 2>&1
+	endif
+
+	set undodir=~/.vim/cache/undo
+	set undofile
+	set undolevels=500                                           " Maximum undo levels
+	set undoreload=10000                                         " Maximum number lines to save for undo on a buffer reload
+
+" }
+
+" ================ Editor Settings {
+	set backspace=indent,eol,start " Allow backspace in insert mode
+	set nostartofline              " Keep cursor on same column
+	set virtualedit=onemore        " Allow for cursor beyond last character
+
+	"Searching {
+	set hlsearch   " Highlight searches
+	set incsearch  " Incremental searching
+	set ignorecase " Ignore case for searching
+	set smartcase  " Unless there's uppercase
+	"}
+
+	"Indentation {
+	set autoindent    " Indent at the same level of the previous line
+	set expandtab     " Use spaces instead of Tab character
+	set shiftwidth=2
+	set softtabstop=2
+	"}
+
+	"Folding {
+	set foldenable        " Fold  disabled by default
+	set foldmethod=marker " Fold based on marker
+	set foldnestmax=3     " Fold is 3 levels max
+	set foldcolumn=1
+	"}
+" }
+
+" ================ User Interface Settings {
+	syntax on
+	set lazyredraw " Disable redraw while running macros (much faster)
+
+	"Colorscheme {
+	set t_Co=256
+	set background=dark
+	let base16colorspace=256
+	colorscheme base16-default
+	"}
+
+	"Display {
+	set colorcolumn=80    " Draw line at 80 char
+	set cursorline        " Highlight current line
+	set gcr=a:blinkon0    " Disable cursor blink
+	set number            " Show line numbers
+	set showtabline=2     " Show tab bar
+	set tabpagemax=8      " Only show 15 tabs
+	set scrolloff=999     " Keep cursor centered vertically on the screen
+	set sidescrolloff=999 " Keep cursor centered horizontally on the screen
+	set sidescroll=1
+	set splitright        " Open new splits on right
+	set splitbelow        " Open new splits on bottom
+	"}
+
+	"Text Format {
+	set wrap
+	set textwidth=72 " Maximum width of text line
+	set linebreak    " For lines longer than the window, wrap intelligently
+	set showbreak=↪  " String to put before wrapped screen lines
+	set nolist
+	"}
+
+	"Command-line & Statusline{
+	set cmdheight=1  " Height of the command bar
+	set laststatus=2 " Show statusline
+	set showcmd      " Show incomplete commands in statusline
+	set showmode     " Show current mode in statusline
+	set ruler        " Show current cursor position in statusline
+	"}
+" }
