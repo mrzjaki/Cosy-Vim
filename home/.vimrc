@@ -8,8 +8,8 @@ augroup AutoReloadVimRC
 augroup END
 
 " =============== Vundle Initialization ===============
-if filereadable(expand("~/.vim/defaults/vundles.vim-settings"))
-  source ~/.vim/defaults/vundles.vim-settings
+if filereadable(expand("~/.vim/defaults/vundles.cosy-settings"))
+  source ~/.vim/defaults/vundles.cosy-settings
 endif
 
 if filereadable(expand("~/.vim/user/vundles.user-settings"))
@@ -17,17 +17,17 @@ if filereadable(expand("~/.vim/user/vundles.user-settings"))
 endif
 
 " ================ VIM General Settings ========================
-if filereadable(expand("~/.vim/defaults/vim.vim-settings"))
-	source ~/.vim/defaults/vim.vim-settings
+if filereadable(expand("~/.vim/defaults/vim.cosy-settings"))
+	source ~/.vim/defaults/vim.cosy-settings
 endif
 
 if filereadable(expand("~/.vim/user/vim.user-settings"))
-	source ~/.vim/use/vim.user-settings
+	source ~/.vim/user/vim.user-settings
 endif
 
 " ================ VIM Plugin Settings ========================
-if filereadable(expand("~/.vim/defaults/plugins.vim-settings"))
-	source ~/.vim/defaults/plugins.vim-settings
+if filereadable(expand("~/.vim/defaults/plugins.cosy-settings"))
+	source ~/.vim/defaults/plugins.cosy-settings
 endif
 
 if filereadable(expand("~/.vim/user/plugins.user-settings"))
@@ -35,8 +35,8 @@ if filereadable(expand("~/.vim/user/plugins.user-settings"))
 endif
 
 " ================ VIM Keymap Settings ========================
-if filereadable(expand("~/.vim/defaults/keymaps.vim-settings"))
-	source ~/.vim/defaults/keymaps.vim-settings
+if filereadable(expand("~/.vim/defaults/keymaps.cosy-settings"))
+	source ~/.vim/defaults/keymaps.cosy-settings
 endif
 
 if filereadable(expand("~/.vim/user/keymaps.user-settings"))
