@@ -1,6 +1,6 @@
 # Cosy-Vim
 
-A collection of configuration and plugins to setup a familiar and consistent Vim environment.
+A collection of configuration and plugins to setup a familiar and consistent Vim environment. 
 
 ## Requirements
 
@@ -23,7 +23,7 @@ To uninstall Cosy-Vim, run ```> homesick unlink Cosy-Vim```. For more informatio
 ## Features
 
 ### A Note on Vundle
-Cosy-Vim uses [Vundle](http://github.com/gmarik/vundle) to manage plugins. Cosy-Vim automatically installs Vundle, if it hasn't already been installed.
+Cosy-Vim automatically installs [Vundle](http://github.com/gmarik/vundle) to manage plugins.
 
 ### Plugins
 
@@ -40,8 +40,8 @@ Cosy-Vim is really just my personal Vim configuration, and it is evolving as I e
 
 ## TODO
 
-- Installation via shell-script
-- Documentation for Plugins
-- Focus on creating an environment for a full-stack JavaScript developer and Writing with Markdown
+- Installation via shell-script (i.e Not needing Homesick)
+- Brief Documentation for Plugins
+- Search/Research Syntax Highlighting
 - Search/Research more plugins/configurations
 - Search/Research a Vim workflow for Window/Tab/Buffer management

@@ -11,9 +11,11 @@ filetype off				"Required by Vundle
 " Install Vundle if not already installed
 let s:FreshInstall = 0
 if isdirectory($HOME . '/.vim/bundle/vundle') == 0
+	echo "Vundle: Installing Vundle..."
+	echo ""
 	:silent !mkdir -p ~/.vim/bundle > /dev/null 2>&1
 	:silent !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
-	let FreshInstall = 1
+	let s:FreshInstall = 1
 endif
 
 set rtp+=~/.vim/bundle/vundle/
@@ -33,8 +35,9 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'bling/vim-airline'
 
 " If Vundle was fresh installed, install Bundles
-if FreshInstall == 1
-	:BundleInstall
+if s:FreshInstall == 1
+	:silent BundleInstall! 
+	:silent q!
 endif
 
 filetype plugin indent on		"Required by Vundle
